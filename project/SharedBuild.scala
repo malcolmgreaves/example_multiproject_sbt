@@ -3,9 +3,9 @@ import Keys._
 
 object SharedBuild {
 
-  // // // // // // // //
-  // //   Versions  // //
-  // // // // // // // //
+  // // // // // // // // // //
+  // //     Versions      // //
+  // // // // // // // // // //
 
   lazy val breezeV = "0.12"
   lazy val dataV   = "1.0.0"
@@ -13,8 +13,6 @@ object SharedBuild {
   // // // // // // // // // //
   // //    Dependencies   // //
   // // // // // // // // // //
-
-  lazy val scalaMacros = "org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full
 
   lazy val avroCodegen = "com.gonitro" %% "avro-codegen-runtime" % "0.3.4"
   lazy val shapeless   = "com.chuusai" %% "shapeless"            % "2.2.5"
@@ -37,9 +35,16 @@ object SharedBuild {
     "org.scalatest" %% "scalatest" % "2.2.6" % Test
   )
 
-  //////////////////////////////////////////////////
-  //   Code formatting settings for scalariform   //
-  //////////////////////////////////////////////////
+  // // // // // // // // // //
+  // //     Plugins       // //
+  // // // // // // // // // //
+
+  lazy val scalaMacros =
+    "org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full
+
+  // // // // // // // // // //
+  // //      Style        // //
+  // // // // // // // // // //
 
   lazy val sharedCodeFmt = {
     import scalariform.formatter.preferences._
