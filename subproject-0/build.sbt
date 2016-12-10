@@ -1,10 +1,9 @@
 name := "subproject-0"
 
-import sbt._
-import Keys._
 import SharedBuild._
 
 com.typesafe.sbt.SbtScalariform.defaultScalariformSettings
+ScalariformKeys.preferences := sharedCodeFmt
 
 addCompilerPlugin(scalaMacros)
 

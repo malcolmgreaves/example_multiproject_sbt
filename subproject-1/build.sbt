@@ -1,8 +1,8 @@
 name := "subproject-1"
 
-import sbt._
-import Keys._
+import SharedBuild._
 
 com.typesafe.sbt.SbtScalariform.defaultScalariformSettings
+ScalariformKeys.preferences := sharedCodeFmt
 
 fork in run := false
